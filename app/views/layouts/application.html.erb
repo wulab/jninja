@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jninja</title>
+  <%= stylesheet_link_tag "jquery-ui", "fancybox", "application" %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "fancybox", "easing", "mousewheel", "innerfade", "scrollto" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<!-- set message to fire in views using flashMessage() script -->
+<div id="flash"></div>
+
+<div id="wrap">
+
+  <div id="bookmark"><div id="seam"><div>W</div></div></div>
+
+  <div id="sidebar">
+    <ul id="sidenav" class="nav vertical">
+      <li><a href="#top">Back to top</a></li>
+    </ul>
+  </div>
+
+  <div id="page">
+  
+    <%= yield %>
+
+  </div>
+  
+  <div style="clear:both;"></div>
+  
+</div>
+
+</body>
+</html>
